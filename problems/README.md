@@ -8,6 +8,10 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
     - Created a subquery that computes total messages for each guest.
     - Applied DENSE_RANK function over athis result set.
 
+### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
+- Problem Statement:
+    - Write a query that'll identify returning active users. A returning active user is a user that has made a second purchase within 7 days of any other of their purchases. Output a list of user_ids of these returning active users.
+
 ### ID 10354: [Most Profitable Companies](https://platform.stratascratch.com/coding/10354-most-profitable-companies?code_type=1)
 - Problem Statement:
     - Find the 3 most profitable companies in the entire world.
