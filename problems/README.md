@@ -1,5 +1,28 @@
 # Problems
 
+|   ID   | Problem  |
+|--------|----------|
+|   9782 |[Customer Revenue In March](#id-9782-customer-revenue-in-march)|
+|  10061 |[Popularity of Hack](#id-10061-popularity-of-hack)|
+|  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
+|  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
+|  10354 |[Most Profitable Companies](#id-10354-most-profitable-companies)|
+
+-------------------------------------------------------------
+
+### ID 9782: [Customer Revenue In March](https://platform.stratascratch.com/coding/9782-customer-revenue-in-march?code_type=2)
+- Problem Statement:
+    - Calculate the total revenue from each customer in March 2019. Include only customers who were active in March 2019.
+    Output the revenue along with the customer id and sort the results based on the revenue in descending order.
+
+- Comparison between [official solution](../src/python/customer_revenue_march_official_solution.py) and [my solution](../src/python/customer_revenue_march.py):
+    - ```sum``` applied over
+        - ```series```
+            - ```to_frame``` used for creating dataframe from series.
+          vs 
+        - ```dataframe```.
+            - ```rename``` used for renaming the column name.
+
 ### ID 10061: [Popularity of Hack](https://platform.stratascratch.com/coding/10061-popularity-of-hack?code_type=1)
 - Problem Statement:
     - Meta/Facebook has developed a new programing language called Hack.To measure the popularity of Hack they ran a survey with their employees. The survey included data on previous programing familiarity as well as the number of years of experience, age, gender and most importantly satisfaction with Hack. Due to an error location data was not collected, but your supervisor demands a report showing average popularity of Hack by office location. Luckily the user IDs of employees completing the surveys were stored.
