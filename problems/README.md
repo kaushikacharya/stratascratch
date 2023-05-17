@@ -10,6 +10,13 @@
 
 -------------------------------------------------------------
 
+### ID 9781: [Find the rate of processed tickets for each type](https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=1)
+- Problem Statement:
+    - Find the rate of processed tickets for each type.
+- Solutions:
+    - [Official](../src/sql/rate_processed_tickets_each_type_official_solution.sql)
+    - [Mine](../src/sql/ranking_most_active_guests.sql)
+
 ### ID 9782: [Customer Revenue In March](https://platform.stratascratch.com/coding/9782-customer-revenue-in-march?code_type=2)
 - Problem Statement:
     - Calculate the total revenue from each customer in March 2019. Include only customers who were active in March 2019.
