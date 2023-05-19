@@ -2,6 +2,7 @@
 
 |   ID   | Problem  |
 |--------|----------|
+|   9781 |[Find the rate of processed tickets for each type](#id-9781-find-the-rate-of-processed-tickets-for-each-type)
 |   9782 |[Customer Revenue In March](#id-9782-customer-revenue-in-march)|
 |  10061 |[Popularity of Hack](#id-10061-popularity-of-hack)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
@@ -37,6 +38,12 @@
     Output the location along with the average popularity.
 - Approach:
     - Inner join followed by aggregate function to compute average.
+
+### ID 10156: [Number Of Units Per Nationality](https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1)
+- Problem Statement:
+    - Find the number of apartments per nationality that are owned by people under 30 years old. Output the nationality along with the number of apartments. Sort records by the apartments count in descending order.
+- [Approach](../src/sql/units_per_nationality.sql):
+    - Inner join followed by group by.
 
 ### ID 10159: [Ranking Most Active Guests](https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=1)
 - Problem Statement:
