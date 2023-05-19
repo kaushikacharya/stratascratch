@@ -45,6 +45,8 @@
 - Problem Statement:
     - Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.
 Output the host id and the guest id of matched pair.
+- Learning:
+    - Use [drop_duplicates](../notes/README.md#unique-over-multiple-columns) to remove duplicate rows.
 
 ### ID 10156: [Number Of Units Per Nationality](https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1)
 - Problem Statement:
@@ -58,7 +60,7 @@ Output the host id and the guest id of matched pair.
 Output the rank, guest id, and number of total messages they've sent. Order by the highest number of total messages first.
 - Approach:
     - Created a subquery that computes total messages for each guest.
-    - Applied DENSE_RANK function over athis result set.
+    - Applied DENSE_RANK function over this result set.
 
 ### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
 - Problem Statement:
