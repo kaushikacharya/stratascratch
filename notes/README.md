@@ -18,6 +18,18 @@
     - https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-group-by/
 - PostgreSQL evaluates the ```GROUP BY``` clause after the ```FROM``` and ```WHERE``` clauses.
 
+## INNER JOIN:
+- ### WHERE conditions:
+    - [StackOverflow thread](https://dba.stackexchange.com/questions/155972/postgres-join-conditions-vs-where-conditions):
+        - Erwin Brandstetter's answer
+            - *Postgres is free to rearrange predicates in ```JOIN``` & ```WHERE``` clauses in its quest for the best query plan.*
+            - *For **readability and maintainability** it makes sense to place conditions that connect tables in the respective JOIN clause and general conditions in the WHERE clause.*
+        - OP's code shows how to put the various general conditions in the ```WHERE``` clause.
+    - Problems:
+        - [Number Of Units Per Nationality](../problems/README.md#id-10156-number-of-units-per-nationality)
+            - Based on above suggestion, I have evolved [my solution](../src/sql/units_per_nationality.sql).
+                - Earlier solution had the conditions in the WHERE clause of individual tables.
+
 ## reset_index()
 - Resource:
     - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reset_index.html
@@ -37,5 +49,5 @@
             - ```COUNT(CASE WHEN <condition> THEN 1 END) ```
 - Problems:
     - [Find the rate of processed tickets for each type](../problems/README.md#id-9781-find-the-rate-of-processed-tickets-for-each-type)
-        - [My solution](../src/sql/rate_processed_tickets_each_type.sql) followed D-Shih's answer
+        - [My solution](../src/sql/rate_processed_tickets_each_type.sql) follows D-Shih's answer
         - [Official solution](../src/sql/rate_processed_tickets_each_type_official_solution.sql) follows Johan's answer.
