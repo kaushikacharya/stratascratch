@@ -5,6 +5,8 @@
 |   9781 |[Find the rate of processed tickets for each type](#id-9781-find-the-rate-of-processed-tickets-for-each-type)
 |   9782 |[Customer Revenue In March](#id-9782-customer-revenue-in-march)|
 |  10061 |[Popularity of Hack](#id-10061-popularity-of-hack)|
+|  10078 |[Find matching hosts and guests in a way that they are both of the same gender and nationality](#id-10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality)
+|  10156 |[Number Of Units Per Nationality](#id-10156-number-of-units-per-nationality)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
 |  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
 |  10354 |[Most Profitable Companies](#id-10354-most-profitable-companies)|
@@ -38,6 +40,11 @@
     Output the location along with the average popularity.
 - Approach:
     - Inner join followed by aggregate function to compute average.
+
+### ID 10078: [Find matching hosts and guests in a way that they are both of the same gender and nationality](https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1)
+- Problem Statement:
+    - Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.
+Output the host id and the guest id of matched pair.
 
 ### ID 10156: [Number Of Units Per Nationality](https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1)
 - Problem Statement:
