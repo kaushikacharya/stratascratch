@@ -13,6 +13,7 @@
 - ### Common Table Expressions
     - Resource:
         - https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cte/
+        - Haki Benita discusses the issues with CTE and compares it against ```subquery``` in [his blog](https://hakibenita.com/be-careful-with-cte-in-postgre-sql).
     - Problems:
         - [Highest Cost Orders](../problems/README.md#id-9915-highest-cost-orders)
 - ### DENSE_RANK
