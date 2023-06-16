@@ -3,6 +3,18 @@
 2. [Pandas](#pandas)
 
 ## SQL
+- ### BETWEEN
+    - Resource:
+        - https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-between/
+    - *If you want to check a value against of date ranges, you should use the literal date in ISO 8601 format i.e., YYYY-MM-DD.*
+    - Problems:
+        - [Highest Cost Orders](../problems/README.md#id-9915-highest-cost-orders)
+
+- ### Common Table Expressions
+    - Resource:
+        - https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cte/
+    - Problems:
+        - [Highest Cost Orders](../problems/README.md#id-9915-highest-cost-orders)
 - ### DENSE_RANK
     - Resource: 
         - https://www.postgresqltutorial.com/postgresql-window-function/postgresql-dense_rank-function/
