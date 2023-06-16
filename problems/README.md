@@ -10,6 +10,7 @@
 |  10156 |[Number Of Units Per Nationality](#id-10156-number-of-units-per-nationality)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
 |  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
+|  10351 |[Activity Rank](#id-10351-activity-rank)|
 |  10354 |[Most Profitable Companies](#id-10354-most-profitable-companies)|
 
 -------------------------------------------------------------
@@ -83,6 +84,16 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
 ### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
 - Problem Statement:
     - Write a query that'll identify returning active users. A returning active user is a user that has made a second purchase within 7 days of any other of their purchases. Output a list of user_ids of these returning active users.
+
+### ID 10351: [Activity Rank](https://platform.stratascratch.com/coding/10351-activity-rank?code_type=1)
+- Problem Statement:
+    - Find the email activity rank for each user. Email activity rank is defined by the total number of emails sent. The user with the highest number of emails sent will have a rank of 1, and so on. Output the user, total emails, and their activity rank. Order records by the total emails in descending order. Sort users with the same number of emails in alphabetical order.
+    In your rankings, return a unique value (i.e., a unique rank) even if multiple users have the same number of emails. For tie breaker use alphabetical order of the user usernames.
+- Solutions:
+    - [Kaushik](../src/sql/activity_rank.sql)
+        - [rank](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-rank-function/) function utilized.
+    - [Official Solution](../src/sql/activity_rank_official_solution.sql)
+        - [row_number](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-row_number/) function utilized.
 
 ### ID 10354: [Most Profitable Companies](https://platform.stratascratch.com/coding/10354-most-profitable-companies?code_type=1)
 - Problem Statement:
