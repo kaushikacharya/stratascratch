@@ -6,6 +6,7 @@
 |   9782 |[Customer Revenue In March](#id-9782-customer-revenue-in-march)|
 |   9915 |[Highest Cost Orders](#id-9915-highest-cost-orders)|
 |  10061 |[Popularity of Hack](#id-10061-popularity-of-hack)|
+|  10064 |[Highest Energy Consumption](#id-10064-highest-energy-consumption)|
 |  10078 |[Find matching hosts and guests in a way that they are both of the same gender and nationality](#id-10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality)
 |  10156 |[Number Of Units Per Nationality](#id-10156-number-of-units-per-nationality)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
@@ -36,7 +37,8 @@
             - ```rename``` used for renaming the column name.
 
 ### ID 9915: [Highest Cost Orders](https://platform.stratascratch.com/coding/9915-highest-cost-orders?code_type=1)
-- Problem Statemet:
+
+- Problem Statement:
     - Find the customer with the highest daily total order cost between 2019-02-01 to 2019-05-01. If customer had more than one order on a certain day, sum the order costs on daily basis. Output customer's first name, total cost of their items, and the date.  
     For simplicity, you can assume that every first name in the dataset is unique.
     - Tables: customers, orders
@@ -53,12 +55,32 @@
         - Here the join of the tables are done inside the CTE, whereas in my solution join is done in the final query.
 
 ### ID 10061: [Popularity of Hack](https://platform.stratascratch.com/coding/10061-popularity-of-hack?code_type=1)
+
 - Problem Statement:
-    - Meta/Facebook has developed a new programing language called Hack.To measure the popularity of Hack they ran a survey with their employees. The survey included data on previous programing familiarity as well as the number of years of experience, age, gender and most importantly satisfaction with Hack. Due to an error location data was not collected, but your supervisor demands a report showing average popularity of Hack by office location. Luckily the user IDs of employees completing the surveys were stored.
-    Based on the above, find the average popularity of the Hack per office location.  
-    Output the location along with the average popularity.
+  - Meta/Facebook has developed a new programing language called Hack.To measure the popularity of Hack they ran a survey with their employees. The survey included data on previous programing familiarity as well as the number of years of experience, age, gender and most importantly satisfaction with Hack. Due to an error location data was not collected, but your supervisor demands a report showing average popularity of Hack by office location. Luckily the user IDs of employees completing the surveys were stored.
+  Based on the above, find the average popularity of the Hack per office location.  
+  Output the location along with the average popularity.
 - Approach:
-    - Inner join followed by aggregate function to compute average.
+  - Inner join followed by aggregate function to compute average.
+
+### ID 10064: [Highest Energy Consumption](https://platform.stratascratch.com/coding/10064-highest-energy-consumption)
+
+- Problem Statement:
+  - Find the date with the highest total energy consumption from the Meta/Facebook data centers. Output the date along with the total energy consumption across all data centers.
+
+- Approach:
+  - Utilized
+    - [Common Table Expressions](../notes/README.md#common-table-expressions)
+    - [Union All](../notes/README.md#union-all)
+
+- Solutions:
+  - [Kaushik](../src/sql/highest_energy_consumption.sql)
+    - Multiple submissions showing how the code was refined.
+    - Difference with official solution:
+      - [Rank](../notes/README.md#rank--dense_rank) used instead of ```Join``` to extract rows with max value for a column.
+  - [Official](../src/sql/highest_cost_orders_official_solution.sql)
+    - Common Table Expressions used to define sequence of queries.
+    - ```Join``` used to extract the rows with max value for a column.
 
 ### ID 10078: [Find matching hosts and guests in a way that they are both of the same gender and nationality](https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1)
 - Problem Statement:
