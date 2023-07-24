@@ -72,6 +72,10 @@
   - Utilized
     - [Common Table Expressions](../notes/README.md#common-table-expressions)
     - [Union All](../notes/README.md#union-all)
+  - Alternative:
+    - Using [FETCH [WITH TIES]](https://stackoverflow.com/questions/50030508/postgresql-select-all-rows-which-have-max-value-in-one-column)
+      - Haleemur Ali's answer
+      - Works on newer versions of PostgreSQL only.
 
 - Solutions:
   - [Kaushik](../src/sql/highest_energy_consumption.sql)
