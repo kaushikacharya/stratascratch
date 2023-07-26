@@ -13,6 +13,16 @@
   - Problems:
     - [Highest Cost Orders](../problems/README.md#id-9915-highest-cost-orders)
 
+- ### CAST
+
+  - Resource:
+    - https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cast/
+  - Options:
+    - CAST operator
+    - ```expression:type```
+  - Problems:
+    - [Risky Projects](../problems/README.md#id-10304-risky-projects)
+
 - ### Common Table Expressions
 
   - Resource:

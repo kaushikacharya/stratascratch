@@ -10,6 +10,7 @@
 |  10078 |[Find matching hosts and guests in a way that they are both of the same gender and nationality](#id-10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality)
 |  10156 |[Number Of Units Per Nationality](#id-10156-number-of-units-per-nationality)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
+|  10304 |[Risky Projects](#id-10304-risky-projects)
 |  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
 |  10351 |[Activity Rank](#id-10351-activity-rank)|
 |  10354 |[Most Profitable Companies](#id-10354-most-profitable-companies)|
@@ -17,42 +18,44 @@
 -------------------------------------------------------------
 
 ### ID 9781: [Find the rate of processed tickets for each type](https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=1)
+
 - Problem Statement:
-    - Find the rate of processed tickets for each type.
+  - Find the rate of processed tickets for each type.
 - Solutions:
-    - [Official](../src/sql/rate_processed_tickets_each_type_official_solution.sql)
-    - [Mine](../src/sql/ranking_most_active_guests.sql)
+  - [Official](../src/sql/rate_processed_tickets_each_type_official_solution.sql)
+  - [Mine](../src/sql/ranking_most_active_guests.sql)
 
 ### ID 9782: [Customer Revenue In March](https://platform.stratascratch.com/coding/9782-customer-revenue-in-march?code_type=2)
+
 - Problem Statement:
-    - Calculate the total revenue from each customer in March 2019. Include only customers who were active in March 2019.
-    Output the revenue along with the customer id and sort the results based on the revenue in descending order.
+  - *Calculate the total revenue from each customer in March 2019. Include only customers who were active in March 2019.  
+  Output the revenue along with the customer id and sort the results based on the revenue in descending order.*
 
 - Comparison between [official solution](../src/python/customer_revenue_march_official_solution.py) and [my solution](../src/python/customer_revenue_march.py):
-    - ```sum``` applied over
-        - ```series```
-            - ```to_frame``` used for creating dataframe from series.
-          vs 
-        - ```dataframe```.
-            - ```rename``` used for renaming the column name.
+  - ```sum``` applied over
+    - ```series```
+      - ```to_frame``` used for creating dataframe from series.
+      vs
+    - ```dataframe```.
+      - ```rename``` used for renaming the column name.
 
 ### ID 9915: [Highest Cost Orders](https://platform.stratascratch.com/coding/9915-highest-cost-orders?code_type=1)
 
 - Problem Statement:
-    - Find the customer with the highest daily total order cost between 2019-02-01 to 2019-05-01. If customer had more than one order on a certain day, sum the order costs on daily basis. Output customer's first name, total cost of their items, and the date.  
-    For simplicity, you can assume that every first name in the dataset is unique.
-    - Tables: customers, orders
+  - Find the customer with the highest daily total order cost between 2019-02-01 to 2019-05-01. If customer had more than one order on a certain day, sum the order costs on daily basis. Output customer's first name, total cost of their items, and the date.  
+  For simplicity, you can assume that every first name in the dataset is unique.
+  - Tables: customers, orders
 - Approach:
-    - Use [Common Table Expressions](../notes/README.md#common-table-expressions) as we need the [row with max value](https://www.postgresqltutorial.com/postgresql-aggregate-functions/postgresql-max-function/) for a column.
+  - Use [Common Table Expressions](../notes/README.md#common-table-expressions) as we need the [row with max value](https://www.postgresqltutorial.com/postgresql-aggregate-functions/postgresql-max-function/) for a column.
 - Learnings:
-    - The first solution I tried threw the exception:
-        ```(psycopg2.errors.GroupingError) aggregate function calls cannot be nested```
-        as I tried ```MAX(SUM(<column>))```
-        - Solution: One needs to use subselect to get nested aggregate functions as mentioned in the [StackOverflow thread](https://stackoverflow.com/questions/43117033/aggregate-function-calls-cannot-be-nested-postgresql).
+  - The first solution I tried threw the exception:
+    ```(psycopg2.errors.GroupingError) aggregate function calls cannot be nested```
+    as I tried ```MAX(SUM(<column>))```
+    - Solution: One needs to use subselect to get nested aggregate functions as mentioned in the [StackOverflow thread](https://stackoverflow.com/questions/43117033/aggregate-function-calls-cannot-be-nested-postgresql).
 - Solution:
-    - [Kaushik](../src/sql/highest_cost_orders.sql)
-    - [Official Solution](../src/sql/highest_cost_orders_official_solution.sql)
-        - Here the join of the tables are done inside the CTE, whereas in my solution join is done in the final query.
+  - [Kaushik](../src/sql/highest_cost_orders.sql)
+  - [Official Solution](../src/sql/highest_cost_orders_official_solution.sql)
+    - Here the join of the tables are done inside the CTE, whereas in my solution join is done in the final query.
 
 ### ID 10061: [Popularity of Hack](https://platform.stratascratch.com/coding/10061-popularity-of-hack?code_type=1)
 
@@ -107,9 +110,25 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
     - Created a subquery that computes total messages for each guest.
     - Applied DENSE_RANK function over this result set.
 
-### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
+### ID 10304: [Risky Projects](https://platform.stratascratch.com/coding/10304-risky-projects?code_type=1)
+
 - Problem Statement:
-    - Write a query that'll identify returning active users. A returning active user is a user that has made a second purchase within 7 days of any other of their purchases. Output a list of user_ids of these returning active users.
+  - *Identify projects that are at risk for going overbudget. A project is considered to be overbudget if the cost of all employees assigned to the project is greater than the budget of the project.  
+  You'll need to prorate the cost of the employees to the duration of the project. For example, if the budget for a project that takes half a year to complete is $10K, then the total half-year salary of all employees assigned to the project should not exceed $10K. Salary is defined on a yearly basis, so be careful how to calculate salaries for the projects that last less or more than one year.  
+  Output a list of projects that are overbudget with their project name, project budget, and prorated total employee expense (rounded to the next dollar amount).  
+  HINT: to make it simpler, consider that all years have 365 days. You don't need to think about the leap years.*
+
+- Observation:
+  - IMHO, duration should be ```(end_date - start_date) + 1``` instead of ```(end_date - start_date)```.
+
+- Approach:
+  - In [official solution](../src/sql/risky_projects_official_solution.sql), all the three tables are joined first and then select logic is applied.
+  - In [my solution](../src/sql/risky_projects.sql), inner join applied over sub-queries.
+
+### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
+
+- Problem Statement:
+  - *Write a query that'll identify returning active users. A returning active user is a user that has made a second purchase within 7 days of any other of their purchases. Output a list of user_ids of these returning active users.*
 
 ### ID 10351: [Activity Rank](https://platform.stratascratch.com/coding/10351-activity-rank?code_type=1)
 - Problem Statement:
