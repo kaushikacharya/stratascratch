@@ -106,3 +106,14 @@
 
   - [drop_duplicates](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html)
     - [unique](https://pandas.pydata.org/docs/reference/api/pandas.unique.html) works over a single column only.
+
+- ### Group by
+
+  - [Pandas documentation](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html) explains split-apply-combine process.
+    - [realpython](https://realpython.com/pandas-groupby/) explains with dataset examples.
+
+- ### rank
+
+  - [DataFrame.rank](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html)
+  - Problems:
+    - [Activity Rank](../problems/README.md#id-10351-activity-rank)

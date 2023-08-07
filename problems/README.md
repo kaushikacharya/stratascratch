@@ -131,14 +131,21 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
   - *Write a query that'll identify returning active users. A returning active user is a user that has made a second purchase within 7 days of any other of their purchases. Output a list of user_ids of these returning active users.*
 
 ### ID 10351: [Activity Rank](https://platform.stratascratch.com/coding/10351-activity-rank?code_type=1)
+
 - Problem Statement:
-    - Find the email activity rank for each user. Email activity rank is defined by the total number of emails sent. The user with the highest number of emails sent will have a rank of 1, and so on. Output the user, total emails, and their activity rank. Order records by the total emails in descending order. Sort users with the same number of emails in alphabetical order.
-    In your rankings, return a unique value (i.e., a unique rank) even if multiple users have the same number of emails. For tie breaker use alphabetical order of the user usernames.
+  - Find the email activity rank for each user. Email activity rank is defined by the total number of emails sent. The user with the highest number of emails sent will have a rank of 1, and so on. Output the user, total emails, and their activity rank. Order records by the total emails in descending order. Sort users with the same number of emails in alphabetical order.  
+  In your rankings, return a unique value (i.e., a unique rank) even if multiple users have the same number of emails. For tie breaker use alphabetical order of the user usernames.
 - Solutions:
+  - PostgreSQL:
     - [Kaushik](../src/sql/activity_rank.sql)
-        - [rank](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-rank-function/) function utilized.
+      - [rank](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-rank-function/) function utilized.
     - [Official Solution](../src/sql/activity_rank_official_solution.sql)
-        - [row_number](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-row_number/) function utilized.
+      - [row_number](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-row_number/) function utilized.
+  - Python
+    - [Kaushik](../src/python/activity_rank.py)
+    - [Official Solution](../src/python/activity_rank_official_solution.py)
+      - Usage of [aggregation method](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#built-in-aggregation-methods) ```size``` whereas my solution used ```count```. ```size``` is better as ```count``` only considers non-NA.
+      - ```groupby``` produces ```Series``` instead of ```DataFrame```.
 
 ### ID 10354: [Most Profitable Companies](https://platform.stratascratch.com/coding/10354-most-profitable-companies?code_type=1)
 - Problem Statement:
