@@ -143,16 +143,19 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
       - [row_number](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-row_number/) function utilized.
   - Python
     - [Kaushik](../src/python/activity_rank.py)
+      - ```rank``` computed on the tuple which contains ```from_user``` and ```total_emails``` as describes in user B. M.'s answer in the [stackoverflow thread](https://stackoverflow.com/questions/41974374/pandas-rank-by-multiple-columns).
     - [Official Solution](../src/python/activity_rank_official_solution.py)
       - Usage of [aggregation method](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#built-in-aggregation-methods) ```size``` whereas my solution used ```count```. ```size``` is better as ```count``` only considers non-NA.
       - ```groupby``` produces ```Series``` instead of ```DataFrame```.
+      - IMHO, ```rank``` is computed based on only ```total_emails```. How would it assign rank to the users in alphabetical order which have the same ```total_emails```?
 
 ### ID 10354: [Most Profitable Companies](https://platform.stratascratch.com/coding/10354-most-profitable-companies?code_type=1)
+
 - Problem Statement:
-    - Find the 3 most profitable companies in the entire world.
+  - Find the 3 most profitable companies in the entire world.
 Output the result along with the corresponding company name.
 Sort the result based on profits in descending order.
 - Challenge:
-    - Though the solution seems to an easy one, but that's not the case. It may seem that, we just sort in descending order and then select the first three. There might be case where there are more than three companies whose profits are in the top 3 ranked ones.
-        - Unfortunately, the test database in the website at the time of submission didn't had this case.
-        - TODO Update my solution to tackle this.
+  - Though the solution seems to an easy one, but that's not the case. It may seem that, we just sort in descending order and then select the first three. There might be case where there are more than three companies whose profits are in the top 3 ranked ones.
+    - Unfortunately, the test database in the website at the time of submission didn't had this case.
+    - TODO Update my solution to tackle this.
