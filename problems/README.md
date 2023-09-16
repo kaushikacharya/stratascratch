@@ -10,6 +10,7 @@
 |  10078 |[Find matching hosts and guests in a way that they are both of the same gender and nationality](#id-10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality)
 |  10156 |[Number Of Units Per Nationality](#id-10156-number-of-units-per-nationality)|
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
+|  10300 |[Premium vs Freemium](#id-10300-premium-vs-freemium)|
 |  10304 |[Risky Projects](#id-10304-risky-projects)
 |  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
 |  10351 |[Activity Rank](#id-10351-activity-rank)|
@@ -103,12 +104,25 @@ Output the host id and the guest id of matched pair.
     - Inner join followed by group by.
 
 ### ID 10159: [Ranking Most Active Guests](https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=1)
+
 - Problem Statement:
-    - Rank guests based on the number of messages they've exchanged with the hosts. Guests with the same number of messages as other guests should have the same rank. Do not skip rankings if the preceding rankings are identical.
+  - Rank guests based on the number of messages they've exchanged with the hosts. Guests with the same number of messages as other guests should have the same rank. Do not skip rankings if the preceding rankings are identical.
 Output the rank, guest id, and number of total messages they've sent. Order by the highest number of total messages first.
 - Approach:
-    - Created a subquery that computes total messages for each guest.
-    - Applied DENSE_RANK function over this result set.
+  - Created a subquery that computes total messages for each guest.
+  - Applied DENSE_RANK function over this result set.
+
+### ID 10300: [Premium vs Freemium](https://platform.stratascratch.com/coding/10300-premium-vs-freemium?code_type=1)
+
+- Problem Statement:
+  - Find the total number of downloads for paying and non-paying users by date. Include only records where non-paying customers have more downloads than paying customers. The output should be sorted by earliest date first and contain 3 columns date, non-paying downloads, paying downloads.
+- Approach:
+  - Create a subquery that calculates the total downloads for paying and non-paying users by date.
+  - Filter the results from the above subquery.
+- Solutions:
+  - [Kaushik](../src/sql/premium_vs_freemium.sql)
+    - Best practice: Unlike my solution, official solution uses mulitple joins instead of subqueries to calculate the total downloads.
+  - [Official solution](../src/sql/premium_vs_freemium_official_solution.sql)
 
 ### ID 10304: [Risky Projects](https://platform.stratascratch.com/coding/10304-risky-projects?code_type=1)
 
@@ -143,7 +157,9 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
       - [row_number](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-row_number/) function utilized.
   - Python
     - [Kaushik](../src/python/activity_rank.py)
-      - ```rank``` computed on the tuple which contains ```from_user``` and ```total_emails``` as describes in user B. M.'s answer in the [stackoverflow thread](https://stackoverflow.com/questions/41974374/pandas-rank-by-multiple-columns).
+      - ```rank``` over multiple columns:
+        - Implemented by creating tuple of ```from_user``` and ```total_emails```.
+        - Resource: User B. M.'s answer in the [stackoverflow thread](https://stackoverflow.com/questions/41974374/pandas-rank-by-multiple-columns).
     - [Official Solution](../src/python/activity_rank_official_solution.py)
       - Usage of [aggregation method](https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#built-in-aggregation-methods) ```size``` whereas my solution used ```count```. ```size``` is better as ```count``` only considers non-NA.
       - ```groupby``` produces ```Series``` instead of ```DataFrame```.

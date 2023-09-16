@@ -13,6 +13,13 @@
   - Problems:
     - [Highest Cost Orders](../problems/README.md#id-9915-highest-cost-orders)
 
+- ### CASE
+
+  - Resource:
+    - [PostgreSQL tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-case/)
+  - Problems:
+    - [Premium vs Freemium](../problems/README.md#id-10300-premium-vs-freemium)
+
 - ### CAST
 
   - Resource:
@@ -56,7 +63,6 @@
 - ### INNER JOIN
 
   - **WHERE conditions**
-  
     - [StackOverflow thread](https://dba.stackexchange.com/questions/155972/postgres-join-conditions-vs-where-conditions):
       - Erwin Brandstetter's answer
         - *Postgres is free to rearrange predicates in ```JOIN``` & ```WHERE``` clauses in its quest for the best query plan.*
@@ -66,6 +72,12 @@
       - [Number Of Units Per Nationality](../problems/README.md#id-10156-number-of-units-per-nationality)
         - Based on above suggestion, I have evolved [my solution](../src/sql/units_per_nationality.sql).
           - Earlier solution had the conditions in the WHERE clause of individual tables.
+  
+  - **Join vs Subquery**
+    - [Linkedin collaborative article](https://www.linkedin.com/advice/0/how-do-you-decide-when-use-subquery-join-sql)
+      - *Generally speaking, joins are faster than subqueries, because they can use indexes and other optimization techniques.*
+    - Problems:
+      - [Premium vs Freemium](../problems/README.md#id-10300-premium-vs-freemium)
 
 - ### UNION [ALL]
 
@@ -117,3 +129,4 @@
   - [DataFrame.rank](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html)
   - Problems:
     - [Activity Rank](../problems/README.md#id-10351-activity-rank)
+      - ```rank``` over multiple columns using ```tuple```.

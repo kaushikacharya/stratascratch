@@ -21,6 +21,7 @@ The lessons learned have been listed [here](./notes/README.md) along with the co
 |10078|[Find matching hosts and guests in a way that they are both of the same gender and nationality](./problems/README.md#id-10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality)|[PostgreSQL](./src/sql/matching_hosts_and_guests.sql), [Python](./src/python/matching_hosts_and_guests.py)|
 |10156|[Number Of Units Per Nationality](./problems/README.md#id-10156-number-of-units-per-nationality)|[PostgreSQL](./src/sql/units_per_nationality.sql)|[PostgreSQL](./src/sql/units_per_nationality_official_soluiton.sql)|
 |10159|[Ranking Most Active Guests](./problems/README.md#id-10159-ranking-most-active-guests)|[PostgreSQL](./src/sql/ranking_most_active_guests.sql)|
+|10300|[Premium vs Freemium](./problems/README.md#id-10300-premium-vs-freemium])|[PostgreSQL](./src/sql/premium_vs_freemium.sql)|[PostgreSQL](./src/sql/premium_vs_freemium_official_solution.sql)|
 |10304|[Risky Projects](./problems/README.md#id-10304-risky-projects)|[PostgreSQL](./src/sql/risky_projects.sql)|[PostgreSQL](./src/sql/risky_projects_official_solution.sql)
 |10322|[Finding User Purchases](./problems/README.md#id-10322-finding-user-purchases)|[Python](./src/python/finding_user_purchases.py)
 |10351|[Activity Rank](./problems/README.md#id-10351-activity-rank)|[PostgreSQL](./src/sql/activity_rank.sql), [Python](./src/python/activity_rank.py)|[PostgreSQL](./src/sql/activity_rank_official_solution.sql), [Python](./src/python/activity_rank_official_solution.py)|
