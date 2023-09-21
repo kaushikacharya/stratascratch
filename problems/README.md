@@ -12,6 +12,7 @@
 |  10159 |[Ranking Most Active Guests](#id-10159-ranking-most-active-guests)|
 |  10300 |[Premium vs Freemium](#id-10300-premium-vs-freemium)|
 |  10304 |[Risky Projects](#id-10304-risky-projects)
+|  10319 |[Monthly Percentage Difference](#id-10319-monthly-percentage-difference)|
 |  10322 |[Finding User Purchases](#id-10322-finding-user-purchases)|
 |  10351 |[Activity Rank](#id-10351-activity-rank)|
 |  10354 |[Most Profitable Companies](#id-10354-most-profitable-companies)|
@@ -98,10 +99,11 @@ Output the host id and the guest id of matched pair.
     - Use [drop_duplicates](../notes/README.md#unique-over-multiple-columns) to remove duplicate rows.
 
 ### ID 10156: [Number Of Units Per Nationality](https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1)
+
 - Problem Statement:
-    - Find the number of apartments per nationality that are owned by people under 30 years old. Output the nationality along with the number of apartments. Sort records by the apartments count in descending order.
+  - Find the number of apartments per nationality that are owned by people under 30 years old. Output the nationality along with the number of apartments. Sort records by the apartments count in descending order.
 - [Approach](../src/sql/units_per_nationality.sql):
-    - Inner join followed by group by.
+  - Inner join followed by group by.
 
 ### ID 10159: [Ranking Most Active Guests](https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=1)
 
@@ -138,6 +140,18 @@ Output the rank, guest id, and number of total messages they've sent. Order by t
 - Approach:
   - In [official solution](../src/sql/risky_projects_official_solution.sql), all the three tables are joined first and then select logic is applied.
   - In [my solution](../src/sql/risky_projects.sql), inner join applied over sub-queries.
+
+### ID 10319: [Monthly Percentage Difference](https://platform.stratascratch.com/coding/10319-monthly-percentage-difference?code_type=1)
+
+- Problem Statement:
+  - *Given a table of purchases by date, calculate the month-over-month percentage change in revenue. The output should include the year-month date (YYYY-MM) and percentage change, rounded to the 2nd decimal point, and sorted from the beginning of the year to the end of the year.
+The percentage change column will be populated from the 2nd month forward and can be calculated as ((this month's revenue - last month's revenue) / last month's revenue)*100.*
+
+- Solutions:
+  - [Official Solution](../src/sql/monthly_percentage_difference_official_solution.sql)
+    - WINDOW used
+  - [Mine](../src/sql/monthly_percentage_difference.sql)
+    - Usage of [Common Table Expressions](../notes/README.md#common-table-expressions)
 
 ### ID 10322: [Finding User Purchases](https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2)
 

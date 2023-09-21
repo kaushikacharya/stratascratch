@@ -49,10 +49,12 @@
 - ### EXTRACT function
 
   - Resource:
-    - https://www.postgresqltutorial.com/postgresql-date-functions/postgresql-extract/
+    - [PostgreSQL Tutorial](https://www.postgresqltutorial.com/postgresql-date-functions/postgresql-extract/)
   - Problems:
     - [Customer Revenue March](../problems/README.md#id-9782-customer-revenue-in-march)
       - Extraction of year, month from datetime.
+    - [Monthly Percentage Difference](../problems/README.md#id-10319-monthly-percentage-difference)
+      - Formatting function ```to_char()``` used as multiple fields needed to be extracted.
 
 - ### GROUP BY
 
@@ -78,6 +80,11 @@
       - *Generally speaking, joins are faster than subqueries, because they can use indexes and other optimization techniques.*
     - Problems:
       - [Premium vs Freemium](../problems/README.md#id-10300-premium-vs-freemium)
+
+- ### LAG
+
+  - Resource
+    - [PostgreSQL tutorial](https://www.postgresqltutorial.com/postgresql-window-function/postgresql-lag-function/)
 
 - ### UNION [ALL]
 

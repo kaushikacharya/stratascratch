@@ -23,6 +23,7 @@ The lessons learned have been listed [here](./notes/README.md) along with the co
 |10159|[Ranking Most Active Guests](./problems/README.md#id-10159-ranking-most-active-guests)|[PostgreSQL](./src/sql/ranking_most_active_guests.sql)|
 |10300|[Premium vs Freemium](./problems/README.md#id-10300-premium-vs-freemium])|[PostgreSQL](./src/sql/premium_vs_freemium.sql)|[PostgreSQL](./src/sql/premium_vs_freemium_official_solution.sql)|
 |10304|[Risky Projects](./problems/README.md#id-10304-risky-projects)|[PostgreSQL](./src/sql/risky_projects.sql)|[PostgreSQL](./src/sql/risky_projects_official_solution.sql)
+|10319|[Monthly Percentage Difference](./problems/README.md#id-10319-monthly-percentage-difference)|[PostgreSQL](./src/sql/monthly_percentage_difference.sql)|[PostgreSQL](./src/sql/monthly_percentage_difference_official_solution.sql)|
 |10322|[Finding User Purchases](./problems/README.md#id-10322-finding-user-purchases)|[Python](./src/python/finding_user_purchases.py)
 |10351|[Activity Rank](./problems/README.md#id-10351-activity-rank)|[PostgreSQL](./src/sql/activity_rank.sql), [Python](./src/python/activity_rank.py)|[PostgreSQL](./src/sql/activity_rank_official_solution.sql), [Python](./src/python/activity_rank_official_solution.py)|
 |10354|[Most Profitable Companies](./problems/README.md#id-10354-most-profitable-companies)|[PostgreSQL](./src/sql/most_profitable_companies.sql), [Python](./src/python/most_profitable_companies.py)|
